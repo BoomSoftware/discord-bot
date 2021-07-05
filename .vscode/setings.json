@@ -1,0 +1,40 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.detectIndentation": false,
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": true,
+    "editor.rulers": [150],
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 150,
+    "search.exclude": {
+        "**/dist": true,
+        "**/package-lock.json": true,
+        "**/www": true
+    },
+    "window.title": "${folderName}",
+
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+
+    "git.autofetch": true,
+    "git.inputValidationSubjectLength": 128,
+
+    "javascript.suggestionActions.enabled": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.tree.indent": 15,
+    "workbench.editor.tabSizing": "shrink",
+    "editor.fontSize": 15
+}
