@@ -36,41 +36,31 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.BotMain = void 0;
-var discord_js_1 = require("discord.js");
-var commands_1 = require("./commands");
-var functions_1 = require("./functions");
-var BotMain = /** @class */ (function () {
-    function BotMain() {
-        console.log("Bot initialization...");
-        this.discordClient = new discord_js_1.Client();
+exports.Commands = void 0;
+var config = require("./models/config.js");
+var development_1 = require("./functions/development");
+var Commands = /** @class */ (function () {
+    function Commands() {
     }
-    BotMain.prototype.initBot = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var commands;
+    Commands.prototype.listentForFunction = function (client) {
+        var _this = this;
+        client.on("message", function (message) { return __awaiter(_this, void 0, void 0, function () {
+            var development;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        this.discordClient.once("ready", function () {
-                            console.log("Bot initialization has been finised sucessfully");
-                        });
-                        console.log("Bot is trying to log in...");
-                        return [4 /*yield*/, this.discordClient.login(process.env.DISCORD_TOKEN)];
+                        console.log("NEW COMMAND RECEIVED");
+                        if (!(message.content === config.prefix + "webhook")) return [3 /*break*/, 2];
+                        development = new development_1.Development(client);
+                        return [4 /*yield*/, development.createDevelopmentChannels(message)];
                     case 1:
                         _a.sent();
-                        console.log("Bot has been sucessfully logged in");
-                        commands = new commands_1.Commands();
-                        commands.listentForFunction(this.discordClient);
-                        console.log("Bot is listetning for commands...");
-                        return [2 /*return*/];
+                        _a.label = 2;
+                    case 2: return [2 /*return*/];
                 }
             });
-        });
+        }); });
     };
-    BotMain.prototype.welcome = function () {
-        var welcome = new functions_1.Welcome(this.discordClient);
-        welcome.welcomeNewUser();
-    };
-    return BotMain;
+    return Commands;
 }());
-exports.BotMain = BotMain;
+exports.Commands = Commands;
