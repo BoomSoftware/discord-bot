@@ -1,5 +1,5 @@
 import { Client } from 'discord.js';
-
+import { Welcome } from './functions';
 export class BotMain {
     private discordClient: Client;
 
@@ -14,5 +14,9 @@ export class BotMain {
         console.log(`Bot is trying to log in...`);
         await this.discordClient.login(process.env.DISCORD_TOKEN);
         console.log(`Bot has been sucessfully logged in`);
+    }
+    welcome():void{
+        const welcome = new Welcome(this.discordClient);
+        welcome.welcomeNewUser();
     }
 }

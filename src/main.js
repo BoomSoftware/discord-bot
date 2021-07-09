@@ -51,6 +51,7 @@ function main() {
                     return [4 /*yield*/, bot.initBot()];
                 case 1:
                     _a.sent();
+                    bot.welcome();
                     return [2 /*return*/];
             }
         });

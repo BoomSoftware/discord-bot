@@ -38,6 +38,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 exports.__esModule = true;
 exports.BotMain = void 0;
 var discord_js_1 = require("discord.js");
+var functions_1 = require("./functions");
 var BotMain = /** @class */ (function () {
     function BotMain() {
         console.log("Bot initialization...");
@@ -60,6 +61,10 @@ var BotMain = /** @class */ (function () {
                 }
             });
         });
+    };
+    BotMain.prototype.welcome = function () {
+        var welcome = new functions_1.Welcome(this.discordClient);
+        welcome.welcomeNewUser();
     };
     return BotMain;
 }());
