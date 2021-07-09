@@ -1,24 +1,25 @@
 {
-  "compilerOptions": {
-      "baseUrl": ".",
-      "declaration": true,
-      "downlevelIteration": true,
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "importHelpers": true,
-      "lib": ["es2018", "dom"],
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "noEmit": true,
-      "resolveJsonModule": true,
-      "rootDir": ".",
-      "skipLibCheck": true,
-      "sourceMap": true,
-      "strict": true,
-      "target": "es2015"
-  },
+    "compilerOptions": {
+        "baseUrl": ".",
+        "declaration": true,
+        "downlevelIteration": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "lib": ["es2018", "dom"],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noEmit": true,
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "rootDir": ".",
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": true,
+        "target": "es2015"
+    },
 
-  // Include and exclude files for eslint to pick them.
-  "include": [".*.js", "*.js", "*.ts", "**/*.ts", "**/*.js"],
-  "exclude": ["node_modules", "tmp", "assets", "dist"]
+    // Include and exclude files for eslint to pick them.
+    "include": [".*.js", "*.js", "*.ts", "**/*.ts", "**/*.js", ".eslintrc.js"],
+    "exclude": ["node_modules", "tmp", "assets", "dist"]
 }

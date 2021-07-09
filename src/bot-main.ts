@@ -1,5 +1,18 @@
-import * as discord from 'discord.js'
+import { Client } from 'discord.js';
 
 export class BotMain {
-    client: discord.Client = new discord.Client();
+    private discordClient: Client;
+
+    constructor() {
+        console.log(`Bot initialization...`);
+        this.discordClient = new Client();
+    }
+    async initBot(): Promise<void> {
+        this.discordClient.once(`ready`, () => {
+            console.log(`Bot initialization has been finised sucessfully`);
+        });
+        console.log(`Bot is trying to log in...`);
+        await this.discordClient.login(process.env.DISCORD_TOKEN);
+        console.log(`Bot has been sucessfully logged in`);
+    }
 }
