@@ -2,5 +2,5 @@ module.exports =
     {
         "developmentChannels": [`github-updates`],
         "prefix": `~`,
-        "commands": [],
+        "commands": [`create-webhook`],
     };

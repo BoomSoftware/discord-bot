@@ -7,7 +7,7 @@ export class Commands {
     listentForFunction(client: Client): void {
         client.on(`message`, async (message) => {
             console.log(`NEW COMMAND RECEIVED`);
-            if (message.content === `${config.prefix}webhook`) {
+            if (message.content === `${config.prefix}${config.commands[0]}`) {
                 const development = new Development(client);
                 await development.createDevelopmentChannels(message);
             }
