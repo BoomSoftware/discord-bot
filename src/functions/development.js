@@ -37,7 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 exports.__esModule = true;
 exports.Development = void 0;
-var config = require("../models/config.js");
+var config = require("../models/config");
 var Development = /** @class */ (function () {
     function Development(client) {
         this.client = client;

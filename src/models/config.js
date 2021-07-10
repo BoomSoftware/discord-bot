@@ -1,5 +1,6 @@
 module.exports =
-{
-    "developmentChannels": [`github-updates`],
-    "prefix": `~`,
-};
+    {
+        "developmentChannels": [`github-updates`],
+        "prefix": `~`,
+        "commands": [],
+    };

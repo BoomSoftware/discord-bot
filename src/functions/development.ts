@@ -1,4 +1,4 @@
-import * as config from '../models/config.js';
+import * as config from '../models/config';
 
 import { Client, Message, TextChannel } from 'discord.js';
 
